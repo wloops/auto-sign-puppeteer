@@ -1,0 +1,118 @@
+[2025-05-11T14:55:21.283Z] [INFO] [system] 启动定时任务...
+[2025-05-11T14:55:21.286Z] [INFO] [system] 已设置签到时间: 22:08
+[2025-05-11T14:55:21.310Z] [INFO] [system] 已设置签退时间: 18:53
+[2025-05-11T14:55:21.311Z] [INFO] [system] 检测到--now参数，立即执行签到流程...
+[2025-05-11T14:55:21.312Z] [INFO] [system] 启动浏览器...
+[2025-05-11T14:55:31.402Z] [INFO] [system] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lwl&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T14:55:31.403Z] [INFO] [system] 登录成功：URL已改变到登录后页面
+[2025-05-11T14:55:39.165Z] [INFO] [system] 浏览器已关闭
+[2025-05-11T15:03:29.499Z] [INFO] [system] 收到终止信号，退出程序
+[2025-05-11T15:03:35.989Z] [INFO] [system] 启动定时任务...
+[2025-05-11T15:03:35.992Z] [INFO] [system] 已设置签到时间: 22:08
+[2025-05-11T15:03:36.015Z] [INFO] [system] 已设置签退时间: 18:53
+[2025-05-11T15:03:36.016Z] [INFO] [system] 检测到--now参数，立即执行签到流程...
+[2025-05-11T15:03:36.016Z] [INFO] [system] 启动浏览器...
+[2025-05-11T15:03:45.881Z] [INFO] [system] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lwl&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T15:03:45.882Z] [INFO] [system] 登录成功：URL已改变到登录后页面
+[2025-05-11T15:04:04.201Z] [INFO] [system] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lianglx1&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T15:04:04.203Z] [INFO] [system] 登录成功：URL已改变到登录后页面
+[2025-05-11T15:04:09.021Z] [INFO] [system] 浏览器已关闭
+[2025-05-11T15:04:43.056Z] [INFO] [system] 收到终止信号，退出程序
+[2025-05-11T15:04:47.827Z] [INFO] [system] 启动定时任务...
+[2025-05-11T15:04:47.829Z] [INFO] [system] 已设置签到时间: 23:05
+[2025-05-11T15:04:47.847Z] [INFO] [system] 已设置签退时间: 18:51
+[2025-05-11T15:04:47.848Z] [INFO] [system] 服务已启动，等待定时任务触发...
+[2025-05-11T15:04:47.848Z] [INFO] [system] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T15:04:47.849Z] [INFO] [system] 提示：使用 "node sign.js --now --signout" 可立即执行签退流程
+[2025-05-11T15:04:47.849Z] [INFO] [system] 注意：根据配置，签到/签退任务只会在工作日执行
+[2025-05-11T15:04:47.850Z] [INFO] [system] 已配置 2 个账号：lwl, llx
+[2025-05-11T15:05:01.974Z] [WARN] [system] 获取节假日信息失败: Request failed with status code 403，使用默认规则判断
+[2025-05-11T15:05:01.976Z] [INFO] [system] 使用默认规则判断 2025-05-11 不是工作日
+[2025-05-11T15:05:01.976Z] [INFO] [system] 今天不是工作日，跳过签到操作
+[2025-05-11T15:05:01.977Z] [INFO] [system] 已设置签到时间: 23:05
+[2025-05-11T15:07:00.393Z] [INFO] [system] 收到终止信号，退出程序
+[2025-05-11T15:07:04.207Z] [INFO] [system] 启动定时任务...
+[2025-05-11T15:07:04.210Z] [INFO] [system] 已设置签到时间: 23:07
+[2025-05-11T15:07:04.231Z] [INFO] [system] 已设置签退时间: 18:51
+[2025-05-11T15:07:04.233Z] [INFO] [system] 服务已启动，等待定时任务触发...
+[2025-05-11T15:07:04.233Z] [INFO] [system] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T15:07:04.234Z] [INFO] [system] 提示：使用 "node sign.js --now --signout" 可立即执行签退流程
+[2025-05-11T15:07:04.235Z] [INFO] [system] 已配置 2 个账号：lwl, llx
+[2025-05-11T15:07:27.500Z] [INFO] [system] 收到终止信号，退出程序
+[2025-05-11T15:07:41.682Z] [INFO] [system] 启动定时任务...
+[2025-05-11T15:07:41.684Z] [INFO] [system] 已设置签到时间: 23:07
+[2025-05-11T15:07:41.701Z] [INFO] [system] 已设置签退时间: 18:50
+[2025-05-11T15:07:41.702Z] [INFO] [system] 服务已启动，等待定时任务触发...
+[2025-05-11T15:07:41.703Z] [INFO] [system] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T15:07:41.704Z] [INFO] [system] 提示：使用 "node sign.js --now --signout" 可立即执行签退流程
+[2025-05-11T15:07:41.705Z] [INFO] [system] 注意：根据配置，签到/签退任务只会在工作日执行
+[2025-05-11T15:07:41.705Z] [INFO] [system] 已配置 2 个账号：lwl, llx
+[2025-05-11T15:07:51.003Z] [INFO] [system] 收到终止信号，退出程序
+[2025-05-11T15:11:32.783Z] [INFO] [system] 启动定时任务...
+[2025-05-11T15:11:32.785Z] [INFO] [system] 已设置签到时间: 23:09
+[2025-05-11T15:11:32.804Z] [INFO] [system] 已设置签退时间: 18:58
+[2025-05-11T15:11:32.836Z] [INFO] [system] 检测到--now参数，立即执行签到流程...
+[2025-05-11T15:11:32.836Z] [INFO] [system] 启动浏览器...
+[2025-05-11T15:11:39.586Z] [INFO] [system] 收到终止信号，退出程序
+[2025-05-11T15:11:49.682Z] [INFO] [system] 启动定时任务...
+[2025-05-11T15:11:49.684Z] [INFO] [system] 已设置签到时间: 23:09
+[2025-05-11T15:11:49.703Z] [INFO] [system] 已设置签退时间: 18:50
+[2025-05-11T15:11:49.704Z] [INFO] [system] 检测到--now参数，立即执行签到流程...
+[2025-05-11T15:11:49.705Z] [INFO] [system] 启动浏览器...
+[2025-05-11T15:11:55.807Z] [INFO] [system] 收到终止信号，退出程序
+[2025-05-11T15:13:26.644Z] [INFO] [system] 启动定时任务...
+[2025-05-11T15:13:26.647Z] [INFO] [system] 已设置签到时间: 23:09
+[2025-05-11T15:13:26.664Z] [INFO] [system] 已设置签退时间: 18:51
+[2025-05-11T15:13:26.665Z] [INFO] [system] 检测到--now参数，立即执行签到流程...
+[2025-05-11T15:13:26.666Z] [INFO] [system] 启动浏览器...
+[2025-05-11T15:13:36.939Z] [INFO] [system] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lwl&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T15:13:36.941Z] [INFO] [system] 登录成功：URL已改变到登录后页面
+[2025-05-11T15:15:36.715Z] [INFO] [system] 收到终止信号，退出程序
+[2025-05-11T15:15:44.944Z] [INFO] [system] 启动定时任务...
+[2025-05-11T15:15:44.946Z] [INFO] [system] 已设置签到时间: 23:09
+[2025-05-11T15:15:44.968Z] [INFO] [system] 已设置签退时间: 18:53
+[2025-05-11T15:15:44.970Z] [INFO] [system] 服务已启动，等待定时任务触发...
+[2025-05-11T15:15:44.972Z] [INFO] [system] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T15:15:44.973Z] [INFO] [system] 提示：使用 "node sign.js --now --signout" 可立即执行签退流程
+[2025-05-11T15:15:44.974Z] [INFO] [system] 注意：根据配置，签到/签退任务只会在工作日执行
+[2025-05-11T15:15:44.975Z] [INFO] [system] 已配置 2 个账号：lwl, llx
+[2025-05-11T15:15:47.777Z] [INFO] [system] 收到终止信号，退出程序
+[2025-05-11T15:16:24.986Z] [INFO] [system] 启动定时任务...
+[2025-05-11T15:16:24.989Z] [INFO] [system] 已设置签到时间: 23:09
+[2025-05-11T15:16:25.009Z] [INFO] [system] 已设置签退时间: 18:55
+[2025-05-11T15:16:25.010Z] [INFO] [system] 服务已启动，等待定时任务触发...
+[2025-05-11T15:16:25.011Z] [INFO] [system] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T15:16:25.011Z] [INFO] [system] 提示：使用 "node sign.js --now --signout" 可立即执行签退流程
+[2025-05-11T15:16:25.011Z] [INFO] [system] 注意：根据配置，签到/签退任务只会在工作日执行
+[2025-05-11T15:16:25.012Z] [INFO] [system] 已配置 3 个账号：lwl, llx, clj
+[2025-05-11T15:16:56.897Z] [INFO] [system] 收到终止信号，退出程序
+[2025-05-11T15:16:58.597Z] [INFO] [system] 启动定时任务...
+[2025-05-11T15:16:58.600Z] [INFO] [system] 已设置签到时间: 23:17
+[2025-05-11T15:16:58.626Z] [INFO] [system] 已设置签退时间: 18:52
+[2025-05-11T15:16:58.628Z] [INFO] [system] 服务已启动，等待定时任务触发...
+[2025-05-11T15:16:58.628Z] [INFO] [system] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T15:16:58.629Z] [INFO] [system] 提示：使用 "node sign.js --now --signout" 可立即执行签退流程
+[2025-05-11T15:16:58.630Z] [INFO] [system] 注意：根据配置，签到/签退任务只会在工作日执行
+[2025-05-11T15:16:58.631Z] [INFO] [system] 已配置 3 个账号：lwl, llx, clj
+[2025-05-11T15:17:01.739Z] [WARN] [system] 获取节假日信息失败: Request failed with status code 403，使用默认规则判断
+[2025-05-11T15:17:01.740Z] [INFO] [system] 使用默认规则判断 2025-05-11 不是工作日
+[2025-05-11T15:17:01.740Z] [INFO] [system] 今天不是工作日，跳过签到操作
+[2025-05-11T15:17:01.742Z] [INFO] [system] 已设置签到时间: 23:17
+[2025-05-11T15:17:55.817Z] [INFO] [system] 收到终止信号，退出程序
+[2025-05-11T15:17:58.558Z] [INFO] [system] 启动定时任务...
+[2025-05-11T15:17:58.562Z] [INFO] [system] 已设置签到时间: 23:18
+[2025-05-11T15:17:58.592Z] [INFO] [system] 已设置签退时间: 18:57
+[2025-05-11T15:17:58.593Z] [INFO] [system] 服务已启动，等待定时任务触发...
+[2025-05-11T15:17:58.594Z] [INFO] [system] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T15:17:58.595Z] [INFO] [system] 提示：使用 "node sign.js --now --signout" 可立即执行签退流程
+[2025-05-11T15:17:58.596Z] [INFO] [system] 已配置 3 个账号：lwl, llx, clj
+[2025-05-11T15:18:00.009Z] [INFO] [system] 执行签到操作...
+[2025-05-11T15:18:00.011Z] [INFO] [system] 启动浏览器...
+[2025-05-11T15:18:00.016Z] [INFO] [system] 已设置签到时间: 23:18
+[2025-05-11T15:18:10.959Z] [INFO] [system] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lwl&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T15:18:10.960Z] [INFO] [system] 登录成功：URL已改变到登录后页面
+[2025-05-11T15:18:30.328Z] [INFO] [system] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lianglx1&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T15:18:30.329Z] [INFO] [system] 登录成功：URL已改变到登录后页面
+[2025-05-11T15:18:45.266Z] [INFO] [system] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=chenlj&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T15:18:45.267Z] [INFO] [system] 登录成功：URL已改变到登录后页面
+[2025-05-11T15:18:51.382Z] [INFO] [system] 浏览器已关闭

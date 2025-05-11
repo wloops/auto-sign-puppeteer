@@ -1,0 +1,10 @@
+[2025-05-11T15:18:35.329Z] [INFO] [clj] 开始处理账号: clj 的签到
+[2025-05-11T15:18:36.377Z] [INFO] [clj] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T15:18:37.623Z] [INFO] [clj] 填写登录表单
+[2025-05-11T15:18:43.200Z] [INFO] [clj] 提交登录表单
+[2025-05-11T15:18:46.509Z] [INFO] [clj] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\clj\login-1746976725268.png
+[2025-05-11T15:18:46.510Z] [INFO] [clj] 在当前页面执行签到操作
+[2025-05-11T15:18:46.511Z] [INFO] [clj] 查找并点击签到按钮
+[2025-05-11T15:18:48.816Z] [INFO] [clj] 等待签到成功弹窗
+[2025-05-11T15:18:49.927Z] [INFO] [clj] 签到成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\clj\signin-1746976729471.png
+[2025-05-11T15:18:49.930Z] [INFO] [clj] 账号 clj 自动化签到流程完成

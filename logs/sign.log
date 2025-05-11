@@ -1,0 +1,232 @@
+[2025-04-14T15:20:39.835Z] [INFO] 启动定时任务...
+[2025-04-14T15:20:39.888Z] [INFO] 服务已启动，等待定时任务触发...
+[2025-04-14T15:25:37.332Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T12:32:28.067Z] [INFO] 启动定时任务...
+[2025-05-11T12:32:28.126Z] [INFO] 服务已启动，等待定时任务触发...
+[2025-05-11T12:32:31.614Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T12:32:37.777Z] [INFO] 启动定时任务...
+[2025-05-11T12:32:37.800Z] [INFO] 服务已启动，等待定时任务触发...
+[2025-05-11T12:34:50.364Z] [INFO] 启动定时任务...
+[2025-05-11T12:34:50.387Z] [INFO] 检测到--now参数，立即执行签到流程...
+[2025-05-11T12:34:50.389Z] [INFO] 启动浏览器...
+[2025-05-11T12:35:23.413Z] [INFO] 启动定时任务...
+[2025-05-11T12:35:23.479Z] [INFO] 检测到--now参数，立即执行签到流程...
+[2025-05-11T12:35:23.480Z] [INFO] 测试模式：模拟执行签到流程...
+[2025-05-11T12:35:23.480Z] [INFO] 测试模式：模拟登录成功
+[2025-05-11T12:35:23.481Z] [INFO] 测试模式：模拟签到成功
+[2025-05-11T12:35:23.481Z] [INFO] 自动化签到流程完成（测试模式）
+[2025-05-11T12:37:07.370Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T12:37:08.034Z] [INFO] 启动定时任务...
+[2025-05-11T12:37:08.055Z] [INFO] 检测到--now参数，立即执行签到流程...
+[2025-05-11T12:37:08.065Z] [INFO] 测试模式：执行签到流程...
+[2025-05-11T12:37:08.065Z] [INFO] 启动浏览器...
+[2025-05-11T12:37:08.068Z] [ERROR] 浏览器启动失败: Could not find Chrome (ver. 121.0.6167.85). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: C:\Users\Lucky\.cache\puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+[2025-05-11T12:37:08.069Z] [INFO] 请确保已安装Chrome浏览器，或检查config.js中的browser配置
+[2025-05-11T12:38:50.694Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T13:07:17.624Z] [INFO] 启动定时任务...
+[2025-05-11T13:07:17.694Z] [INFO] 检测到--now参数，立即执行签到流程...
+[2025-05-11T13:07:17.694Z] [INFO] 测试模式：执行签到流程...
+[2025-05-11T13:07:17.695Z] [INFO] 启动浏览器...
+[2025-05-11T13:07:19.661Z] [INFO] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T13:07:21.429Z] [INFO] 填写登录表单
+[2025-05-11T13:07:30.004Z] [INFO] 提交登录表单
+[2025-05-11T13:08:02.319Z] [ERROR] 登录失败: Navigation timeout of 30000 ms exceeded，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\login-error-1746968881880.png
+[2025-05-11T13:08:02.319Z] [ERROR] 执行过程中发生错误: 登录失败，终止签到流程
+[2025-05-11T13:08:02.827Z] [INFO] 浏览器已关闭
+[2025-05-11T13:08:17.921Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T13:08:21.633Z] [INFO] 启动定时任务...
+[2025-05-11T13:08:21.653Z] [INFO] 检测到--now参数，立即执行签到流程...
+[2025-05-11T13:08:21.654Z] [INFO] 测试模式：执行签到流程...
+[2025-05-11T13:08:21.654Z] [INFO] 启动浏览器...
+[2025-05-11T13:08:23.118Z] [INFO] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T13:08:24.533Z] [INFO] 填写登录表单
+[2025-05-11T13:08:29.438Z] [INFO] 提交登录表单
+[2025-05-11T13:09:01.904Z] [ERROR] 登录失败: Navigation timeout of 30000 ms exceeded，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\login-error-1746968941444.png
+[2025-05-11T13:09:01.906Z] [ERROR] 执行过程中发生错误: 登录失败，终止签到流程
+[2025-05-11T13:09:02.424Z] [INFO] 浏览器已关闭
+[2025-05-11T13:09:42.325Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T13:09:45.445Z] [INFO] 启动定时任务...
+[2025-05-11T13:09:45.465Z] [INFO] 检测到--now参数，立即执行签到流程...
+[2025-05-11T13:09:45.466Z] [INFO] 测试模式：执行签到流程...
+[2025-05-11T13:09:45.466Z] [INFO] 启动浏览器...
+[2025-05-11T13:09:47.000Z] [INFO] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T13:09:48.500Z] [INFO] 填写登录表单
+[2025-05-11T13:09:53.387Z] [INFO] 提交登录表单
+[2025-05-11T13:10:25.875Z] [ERROR] 登录失败: Navigation timeout of 30000 ms exceeded，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\login-error-1746969025330.png
+[2025-05-11T13:10:25.876Z] [ERROR] 执行过程中发生错误: 登录失败，终止签到流程
+[2025-05-11T13:10:26.370Z] [INFO] 浏览器已关闭
+[2025-05-11T13:14:27.845Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T13:14:30.128Z] [INFO] 启动定时任务...
+[2025-05-11T13:14:30.148Z] [INFO] 检测到--now参数，立即执行签到流程...
+[2025-05-11T13:14:30.149Z] [INFO] 测试模式：执行签到流程...
+[2025-05-11T13:14:30.149Z] [INFO] 启动浏览器...
+[2025-05-11T13:14:31.608Z] [INFO] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T13:14:33.054Z] [INFO] 填写登录表单
+[2025-05-11T13:14:37.946Z] [INFO] 提交登录表单
+[2025-05-11T13:15:09.875Z] [INFO] 导航超时，但继续检查登录状态: Navigation timeout of 30000 ms exceeded
+[2025-05-11T13:15:09.875Z] [INFO] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lwl&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T13:15:09.876Z] [INFO] 登录成功：URL已改变到登录后页面
+[2025-05-11T13:15:10.438Z] [INFO] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\login-1746969309876.png
+[2025-05-11T13:15:10.439Z] [INFO] 导航到签到页面: http://795tg1082ff7.vicp.fun/gms-v4/main
+[2025-05-11T13:15:11.915Z] [INFO] 测试模式：模拟签到成功
+[2025-05-11T13:15:12.247Z] [INFO] 测试签到成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\signin-test-1746969311916.png
+[2025-05-11T13:15:12.248Z] [INFO] 自动化签到流程完成
+[2025-05-11T13:15:12.775Z] [INFO] 浏览器已关闭
+[2025-05-11T13:16:55.659Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T13:16:57.916Z] [INFO] 启动定时任务...
+[2025-05-11T13:16:57.938Z] [INFO] 检测到--now参数，立即执行签到流程...
+[2025-05-11T13:16:57.939Z] [INFO] 测试模式：执行签到流程...
+[2025-05-11T13:16:57.940Z] [INFO] 启动浏览器...
+[2025-05-11T13:16:59.590Z] [INFO] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T13:17:01.028Z] [INFO] 填写登录表单
+[2025-05-11T13:17:06.211Z] [INFO] 提交登录表单
+[2025-05-11T13:17:38.129Z] [INFO] 导航超时，但继续检查登录状态: Navigation timeout of 30000 ms exceeded
+[2025-05-11T13:17:38.132Z] [INFO] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lwl&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T13:17:38.133Z] [INFO] 登录成功：URL已改变到登录后页面
+[2025-05-11T13:17:38.573Z] [INFO] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\login-1746969458134.png
+[2025-05-11T13:17:38.574Z] [INFO] 导航到签到页面: http://795tg1082ff7.vicp.fun/gms-v4/main
+[2025-05-11T13:17:44.706Z] [ERROR] 签到失败: Waiting for selector `#attendSetting` failed: Waiting failed: 5000ms exceeded，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\signin-error-1746969464378.png
+[2025-05-11T13:17:44.707Z] [ERROR] 执行过程中发生错误: 签到失败
+[2025-05-11T13:17:45.082Z] [INFO] 浏览器已关闭
+[2025-05-11T13:23:41.221Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T13:23:43.588Z] [INFO] 启动定时任务...
+[2025-05-11T13:23:43.609Z] [INFO] 检测到--now参数，立即执行签到流程...
+[2025-05-11T13:23:43.609Z] [INFO] 测试模式：执行签到流程...
+[2025-05-11T13:23:43.610Z] [INFO] 启动浏览器...
+[2025-05-11T13:23:45.083Z] [INFO] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T13:23:46.675Z] [INFO] 填写登录表单
+[2025-05-11T13:23:51.558Z] [INFO] 提交登录表单
+[2025-05-11T13:24:23.598Z] [INFO] 导航超时，但继续检查登录状态: Navigation timeout of 30000 ms exceeded
+[2025-05-11T13:24:23.599Z] [INFO] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lwl&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T13:24:23.600Z] [INFO] 登录成功：URL已改变到登录后页面
+[2025-05-11T13:24:24.224Z] [INFO] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\login-1746969863600.png
+[2025-05-11T13:24:24.226Z] [INFO] 在当前页面执行签到操作
+[2025-05-11T13:24:24.228Z] [INFO] 查找并点击签到按钮
+[2025-05-11T13:24:26.540Z] [INFO] 等待签到成功弹窗
+[2025-05-11T13:24:31.965Z] [ERROR] 签到失败: Waiting for selector `.alertMsgBox` failed: Waiting failed: 5000ms exceeded，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\signin-error-1746969871546.png
+[2025-05-11T13:24:31.965Z] [ERROR] 执行过程中发生错误: 签到失败
+[2025-05-11T13:24:32.492Z] [INFO] 浏览器已关闭
+[2025-05-11T13:34:07.848Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T13:34:10.468Z] [INFO] 启动定时任务...
+[2025-05-11T13:34:10.493Z] [INFO] 检测到--now参数，立即执行签到流程...
+[2025-05-11T13:34:10.493Z] [INFO] 测试模式：执行签到流程...
+[2025-05-11T13:34:10.494Z] [INFO] 启动浏览器...
+[2025-05-11T13:34:12.028Z] [INFO] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T13:34:13.581Z] [INFO] 填写登录表单
+[2025-05-11T13:34:18.475Z] [INFO] 提交登录表单
+[2025-05-11T13:34:50.432Z] [INFO] 导航超时，但继续检查登录状态: Navigation timeout of 30000 ms exceeded
+[2025-05-11T13:34:50.433Z] [INFO] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lwl&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T13:34:50.433Z] [INFO] 登录成功：URL已改变到登录后页面
+[2025-05-11T13:34:50.840Z] [INFO] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\login-1746970490434.png
+[2025-05-11T13:34:50.840Z] [INFO] 在当前页面执行签到操作
+[2025-05-11T13:34:50.840Z] [INFO] 查找并点击签到按钮
+[2025-05-11T13:34:53.141Z] [INFO] 等待签到成功弹窗
+[2025-05-11T13:34:54.106Z] [INFO] 签到成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\signin-1746970493790.png
+[2025-05-11T13:34:54.107Z] [INFO] 自动化签到流程完成
+[2025-05-11T13:34:54.633Z] [INFO] 浏览器已关闭
+[2025-05-11T13:41:58.054Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T13:42:00.372Z] [INFO] 启动定时任务...
+[2025-05-11T13:42:00.375Z] [INFO] 已设置签到时间: 21:42
+[2025-05-11T13:42:00.391Z] [INFO] 已设置签退时间: 18:50
+[2025-05-11T13:42:00.391Z] [INFO] 检测到--now参数，立即执行签到流程...
+[2025-05-11T13:42:00.392Z] [INFO] 测试模式：执行签到流程...
+[2025-05-11T13:42:00.392Z] [INFO] 启动浏览器...
+[2025-05-11T13:42:01.927Z] [INFO] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T13:42:03.452Z] [INFO] 填写登录表单
+[2025-05-11T13:42:08.337Z] [INFO] 提交登录表单
+[2025-05-11T13:42:14.039Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T13:42:18.313Z] [INFO] 启动定时任务...
+[2025-05-11T13:42:18.315Z] [INFO] 已设置签到时间: 21:41
+[2025-05-11T13:42:18.331Z] [INFO] 已设置签退时间: 18:53
+[2025-05-11T13:42:18.332Z] [INFO] 服务已启动，等待定时任务触发...
+[2025-05-11T13:42:18.332Z] [INFO] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T13:42:30.135Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T13:42:41.145Z] [INFO] 启动定时任务...
+[2025-05-11T13:42:41.147Z] [INFO] 已设置签到时间: 21:43
+[2025-05-11T13:42:41.163Z] [INFO] 已设置签退时间: 18:58
+[2025-05-11T13:42:41.164Z] [INFO] 服务已启动，等待定时任务触发...
+[2025-05-11T13:42:41.164Z] [INFO] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T13:43:00.012Z] [INFO] 执行签到操作...
+[2025-05-11T13:43:00.013Z] [INFO] 测试模式：执行签到流程...
+[2025-05-11T13:43:00.013Z] [INFO] 启动浏览器...
+[2025-05-11T13:43:00.017Z] [INFO] 已设置签到时间: 21:43
+[2025-05-11T13:43:01.506Z] [INFO] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T13:43:03.279Z] [INFO] 填写登录表单
+[2025-05-11T13:43:08.172Z] [INFO] 提交登录表单
+[2025-05-11T13:43:40.502Z] [INFO] 导航超时，但继续检查登录状态: Navigation timeout of 30000 ms exceeded
+[2025-05-11T13:43:40.504Z] [INFO] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lwl&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T13:43:40.505Z] [INFO] 登录成功：URL已改变到登录后页面
+[2025-05-11T13:43:40.936Z] [INFO] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\login-1746971020506.png
+[2025-05-11T13:43:40.937Z] [INFO] 在当前页面执行签到操作
+[2025-05-11T13:43:40.938Z] [INFO] 查找并点击签到按钮
+[2025-05-11T13:43:43.236Z] [INFO] 等待签到成功弹窗
+[2025-05-11T13:43:44.331Z] [INFO] 签到成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\signin-1746971023883.png
+[2025-05-11T13:43:44.332Z] [INFO] 自动化签到流程完成
+[2025-05-11T13:43:44.677Z] [INFO] 浏览器已关闭
+[2025-05-11T13:53:22.223Z] [INFO] 启动定时任务...
+[2025-05-11T13:53:22.226Z] [INFO] 已设置签到时间: 21:43
+[2025-05-11T13:53:22.247Z] [INFO] 已设置签退时间: 18:52
+[2025-05-11T13:53:22.248Z] [INFO] 服务已启动，等待定时任务触发...
+[2025-05-11T13:53:22.249Z] [INFO] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T13:53:22.249Z] [INFO] 注意：根据配置，签到/签退任务只会在工作日执行
+[2025-05-11T14:06:40.189Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T14:06:42.019Z] [INFO] 启动定时任务...
+[2025-05-11T14:06:42.021Z] [INFO] 已设置签到时间: 22:07
+[2025-05-11T14:06:42.042Z] [INFO] 已设置签退时间: 18:56
+[2025-05-11T14:06:42.044Z] [INFO] 服务已启动，等待定时任务触发...
+[2025-05-11T14:06:42.045Z] [INFO] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T14:06:42.045Z] [INFO] 注意：根据配置，签到/签退任务只会在工作日执行
+[2025-05-11T14:07:00.900Z] [WARN] 获取节假日信息失败: Request failed with status code 403，使用默认规则判断
+[2025-05-11T14:07:00.900Z] [INFO] 使用默认规则判断 2025-05-11 不是工作日
+[2025-05-11T14:07:00.901Z] [INFO] 今天不是工作日，跳过签到操作
+[2025-05-11T14:07:00.901Z] [INFO] 已设置签到时间: 22:07
+[2025-05-11T14:07:18.190Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T14:07:36.857Z] [INFO] 启动定时任务...
+[2025-05-11T14:07:36.859Z] [INFO] 已设置签到时间: 22:08
+[2025-05-11T14:07:36.879Z] [INFO] 已设置签退时间: 18:52
+[2025-05-11T14:07:36.880Z] [INFO] 服务已启动，等待定时任务触发...
+[2025-05-11T14:07:36.880Z] [INFO] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T14:07:39.429Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T14:07:44.205Z] [INFO] 启动定时任务...
+[2025-05-11T14:07:44.206Z] [INFO] 已设置签到时间: 22:08
+[2025-05-11T14:07:44.223Z] [INFO] 已设置签退时间: 18:50
+[2025-05-11T14:07:44.223Z] [INFO] 服务已启动，等待定时任务触发...
+[2025-05-11T14:07:44.224Z] [INFO] 提示：使用 "node sign.js --now" 可立即执行签到流程
+[2025-05-11T14:08:00.010Z] [INFO] 执行签到操作...
+[2025-05-11T14:08:00.011Z] [INFO] 启动浏览器...
+[2025-05-11T14:08:00.016Z] [INFO] 已设置签到时间: 22:08
+[2025-05-11T14:08:01.646Z] [INFO] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T14:08:03.199Z] [INFO] 填写登录表单
+[2025-05-11T14:08:08.115Z] [INFO] 提交登录表单
+[2025-05-11T14:08:40.097Z] [INFO] 导航超时，但继续检查登录状态: Navigation timeout of 30000 ms exceeded
+[2025-05-11T14:08:40.098Z] [INFO] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lwl&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T14:08:40.098Z] [INFO] 登录成功：URL已改变到登录后页面
+[2025-05-11T14:08:40.508Z] [INFO] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\login-1746972520099.png
+[2025-05-11T14:08:40.509Z] [INFO] 在当前页面执行签到操作
+[2025-05-11T14:08:40.510Z] [INFO] 查找并点击签到按钮
+[2025-05-11T14:08:42.791Z] [INFO] 等待签到成功弹窗
+[2025-05-11T14:08:43.755Z] [INFO] 签到成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\signin-1746972523446.png
+[2025-05-11T14:08:43.755Z] [INFO] 自动化签到流程完成
+[2025-05-11T14:08:44.302Z] [INFO] 浏览器已关闭
+[2025-05-11T14:10:44.427Z] [INFO] 收到终止信号，退出程序
+[2025-05-11T14:10:49.611Z] [INFO] 启动定时任务...
+[2025-05-11T14:10:49.614Z] [INFO] 已设置签到时间: 22:08
+[2025-05-11T14:10:49.632Z] [INFO] 已设置签退时间: 18:52
+[2025-05-11T14:10:49.633Z] [INFO] 检测到--now参数，立即执行签到流程...
+[2025-05-11T14:10:49.634Z] [INFO] 启动浏览器...
+[2025-05-11T14:10:51.162Z] [INFO] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T14:10:52.661Z] [INFO] 填写登录表单
+[2025-05-11T14:10:57.557Z] [INFO] 提交登录表单
+[2025-05-11T14:10:59.741Z] [INFO] 当前页面URL: http://795tg1082ff7.vicp.fun/gms-v4/index.jsp?isUKeyLogin=0&SYSTEMTELLERNO=lwl&LOGOPATH=themes%2FdevelopmentServerTest121%2Fdefault%2Fimages%2Flogo.png&SYSTEMKEYNAME=developmentServerTest121
+[2025-05-11T14:10:59.742Z] [INFO] 登录成功：URL已改变到登录后页面
+[2025-05-11T14:11:01.779Z] [INFO] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\login-1746972659743.png
+[2025-05-11T14:11:01.780Z] [INFO] 在当前页面执行签到操作
+[2025-05-11T14:11:01.781Z] [INFO] 查找并点击签到按钮
+[2025-05-11T14:11:04.927Z] [INFO] 等待签到成功弹窗
+[2025-05-11T14:11:05.911Z] [INFO] 签到成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\signin-1746972665582.png
+[2025-05-11T14:11:05.912Z] [INFO] 自动化签到流程完成
+[2025-05-11T14:11:06.670Z] [INFO] 浏览器已关闭
+[2025-05-11T14:55:16.700Z] [INFO] 收到终止信号，退出程序

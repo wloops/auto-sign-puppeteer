@@ -1,0 +1,23 @@
+[2025-05-11T15:03:53.746Z] [INFO] [llx] 开始处理账号: llx 的签到
+[2025-05-11T15:03:54.525Z] [INFO] [llx] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T15:03:55.769Z] [INFO] [llx] 填写登录表单
+[2025-05-11T15:04:02.257Z] [INFO] [llx] 提交登录表单
+[2025-05-11T15:04:05.094Z] [INFO] [llx] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\llx\login-1746975844203.png
+[2025-05-11T15:04:05.095Z] [INFO] [llx] 在当前页面执行签到操作
+[2025-05-11T15:04:05.096Z] [INFO] [llx] 查找并点击签到按钮
+[2025-05-11T15:04:07.386Z] [INFO] [llx] 等待签到成功弹窗
+[2025-05-11T15:04:08.375Z] [INFO] [llx] 签到成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\llx\signin-1746975848030.png
+[2025-05-11T15:04:08.420Z] [INFO] [llx] 账号 llx 自动化签到流程完成
+[2025-05-11T15:13:45.929Z] [INFO] [llx] 开始处理账号: llx 的签到
+[2025-05-11T15:13:46.842Z] [INFO] [llx] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T15:13:47.294Z] [ERROR] [llx] 账号 llx 签到过程中发生错误: Protocol error (Page.bringToFront): Session closed. Most likely the page has been closed.
+[2025-05-11T15:18:19.506Z] [INFO] [llx] 开始处理账号: llx 的签到
+[2025-05-11T15:18:20.337Z] [INFO] [llx] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T15:18:21.562Z] [INFO] [llx] 填写登录表单
+[2025-05-11T15:18:28.083Z] [INFO] [llx] 提交登录表单
+[2025-05-11T15:18:31.732Z] [INFO] [llx] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\llx\login-1746976710330.png
+[2025-05-11T15:18:31.733Z] [INFO] [llx] 在当前页面执行签到操作
+[2025-05-11T15:18:31.735Z] [INFO] [llx] 查找并点击签到按钮
+[2025-05-11T15:18:34.026Z] [INFO] [llx] 等待签到成功弹窗
+[2025-05-11T15:18:35.117Z] [INFO] [llx] 签到成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\llx\signin-1746976714678.png
+[2025-05-11T15:18:35.118Z] [INFO] [llx] 账号 llx 自动化签到流程完成

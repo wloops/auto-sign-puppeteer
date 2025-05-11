@@ -1,0 +1,46 @@
+[2025-05-11T14:55:22.263Z] [INFO] [lwl] 开始处理账号: lwl 的签到
+[2025-05-11T14:55:23.054Z] [INFO] [lwl] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T14:55:24.482Z] [INFO] [lwl] 填写登录表单
+[2025-05-11T14:55:29.449Z] [INFO] [lwl] 提交登录表单
+[2025-05-11T14:55:33.280Z] [INFO] [lwl] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\lwl\login-1746975331404.png
+[2025-05-11T14:55:33.282Z] [INFO] [lwl] 在当前页面执行签到操作
+[2025-05-11T14:55:33.284Z] [INFO] [lwl] 查找并点击签到按钮
+[2025-05-11T14:55:37.410Z] [INFO] [lwl] 等待签到成功弹窗
+[2025-05-11T14:55:38.437Z] [INFO] [lwl] 签到成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\lwl\signin-1746975338095.png
+[2025-05-11T14:55:38.483Z] [INFO] [lwl] 账号 lwl 自动化签到流程完成
+[2025-05-11T15:03:36.693Z] [INFO] [lwl] 开始处理账号: lwl 的签到
+[2025-05-11T15:03:37.466Z] [INFO] [lwl] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T15:03:38.964Z] [INFO] [lwl] 填写登录表单
+[2025-05-11T15:03:43.897Z] [INFO] [lwl] 提交登录表单
+[2025-05-11T15:03:48.921Z] [INFO] [lwl] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\lwl\login-1746975825883.png
+[2025-05-11T15:03:48.922Z] [INFO] [lwl] 在当前页面执行签到操作
+[2025-05-11T15:03:48.922Z] [INFO] [lwl] 查找并点击签到按钮
+[2025-05-11T15:03:52.557Z] [INFO] [lwl] 等待签到成功弹窗
+[2025-05-11T15:03:53.543Z] [INFO] [lwl] 签到成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\lwl\signin-1746975833213.png
+[2025-05-11T15:03:53.545Z] [INFO] [lwl] 账号 lwl 自动化签到流程完成
+[2025-05-11T15:11:33.740Z] [INFO] [lwl] 开始处理账号: lwl 的签到
+[2025-05-11T15:11:34.620Z] [INFO] [lwl] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T15:11:36.531Z] [INFO] [lwl] 填写登录表单
+[2025-05-11T15:11:50.610Z] [INFO] [lwl] 开始处理账号: lwl 的签到
+[2025-05-11T15:11:51.459Z] [INFO] [lwl] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T15:11:52.986Z] [INFO] [lwl] 填写登录表单
+[2025-05-11T15:13:27.562Z] [INFO] [lwl] 开始处理账号: lwl 的签到
+[2025-05-11T15:13:28.392Z] [INFO] [lwl] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T15:13:29.907Z] [INFO] [lwl] 填写登录表单
+[2025-05-11T15:13:34.870Z] [INFO] [lwl] 提交登录表单
+[2025-05-11T15:13:40.786Z] [INFO] [lwl] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\lwl\login-1746976416942.png
+[2025-05-11T15:13:40.789Z] [INFO] [lwl] 在当前页面执行签到操作
+[2025-05-11T15:13:40.791Z] [INFO] [lwl] 查找并点击签到按钮
+[2025-05-11T15:13:44.449Z] [INFO] [lwl] 等待签到成功弹窗
+[2025-05-11T15:13:45.676Z] [INFO] [lwl] 签到成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\lwl\signin-1746976425257.png
+[2025-05-11T15:13:45.678Z] [INFO] [lwl] 账号 lwl 自动化签到流程完成
+[2025-05-11T15:18:01.318Z] [INFO] [lwl] 开始处理账号: lwl 的签到
+[2025-05-11T15:18:02.176Z] [INFO] [lwl] 导航到登录页面: http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121
+[2025-05-11T15:18:03.888Z] [INFO] [lwl] 填写登录表单
+[2025-05-11T15:18:08.833Z] [INFO] [lwl] 提交登录表单
+[2025-05-11T15:18:15.018Z] [INFO] [lwl] 登录成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\lwl\login-1746976690961.png
+[2025-05-11T15:18:15.020Z] [INFO] [lwl] 在当前页面执行签到操作
+[2025-05-11T15:18:15.021Z] [INFO] [lwl] 查找并点击签到按钮
+[2025-05-11T15:18:18.195Z] [INFO] [lwl] 等待签到成功弹窗
+[2025-05-11T15:18:19.339Z] [INFO] [lwl] 签到成功，截图已保存: G:\Workspace\Projects\auto-sign-puppeteer\screenshots\lwl\signin-1746976698857.png
+[2025-05-11T15:18:19.340Z] [INFO] [lwl] 账号 lwl 自动化签到流程完成
