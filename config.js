@@ -2,7 +2,7 @@
  * @Author: Loong wentloop@gmail.com
  * @Date: 2025-04-14 23:13:10
  * @LastEditors: Loong wentloop@gmail.com
- * @LastEditTime: 2025-05-11 23:17:29
+ * @LastEditTime: 2025-05-12 08:32:49
  * @FilePath: \auto-sign-puppeteer\config.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -10,7 +10,7 @@ module.exports = {
   // 系统配置
   system: {
     // 是否只在工作日执行签到/签退
-    workdayOnly: false,
+    workdayOnly: true,
     // 是否使用API获取节假日信息，如果为false则使用默认规则（周一至周五为工作日）
     useHolidayApi: true,
   },
@@ -114,9 +114,9 @@ module.exports = {
   schedule: {
     // 签到时间范围配置
     signIn: {
-      hour: 23, // 小时
-      minStart: 18, // 分钟开始范围
-      minEnd: 18, // 分钟结束范围
+      hour: 8, // 小时
+      minStart: 50, // 分钟开始范围
+      minEnd: 59, // 分钟结束范围
       cron: '0 8 * * *', // 默认cron表达式（用于兼容）
     },
     // 签退时间范围配置
@@ -133,6 +133,5 @@ module.exports = {
     headless: false, // 开发时可设为false查看浏览器
     slowMo: 100, // 操作延迟(毫秒)
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--start-maximized'],
-    headless: false, // 需要显示浏览器窗口
   },
 }
