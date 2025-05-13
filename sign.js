@@ -297,23 +297,7 @@ async function executeSignOut() {
   }
 }
 
-// 在指定时间范围内生成随机时间的函数
-function generateRandomTime(timeConfig) {
-  const { hour, minStart, minEnd } = timeConfig
-  // 生成minStart到minEnd之间的随机分钟数
-  const randomMinute = Math.floor(Math.random() * (minEnd - minStart + 1)) + minStart
-
-  // 创建一个新的Date对象，设置为今天的指定小时和随机分钟
-  const now = new Date()
-  const scheduledTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour, randomMinute)
-
-  // 如果生成的时间已经过去，则设置为明天的同一时间
-  if (scheduledTime < now) {
-    scheduledTime.setDate(scheduledTime.getDate() + 1)
-  }
-
-  return scheduledTime
-}
+// 原generateRandomTime函数已被generateNextWorkdayTime替代
 
 // 判断是否为工作日的函数
 async function isWorkday(date = new Date()) {
@@ -363,49 +347,76 @@ async function isWorkday(date = new Date()) {
 }
 
 // 调度签到/签退任务的函数
+// 在指定时间范围内生成下一个工作日的随机时间的函数
+async function generateNextWorkdayTime(timeConfig) {
+  const { hour, minStart, minEnd } = timeConfig
+  // 生成minStart到minEnd之间的随机分钟数
+  const randomMinute = Math.floor(Math.random() * (minEnd - minStart + 1)) + minStart
+
+  // 创建一个新的Date对象，设置为今天的指定小时和随机分钟
+  const now = new Date()
+  let scheduledTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour, randomMinute)
+
+  // 如果生成的时间已经过去，则设置为明天的同一时间
+  if (scheduledTime < now) {
+    scheduledTime.setDate(scheduledTime.getDate() + 1)
+  }
+
+  // 如果配置为只在工作日执行，则确保调度时间是工作日
+  if (config.system && config.system.workdayOnly) {
+    // 最多检查未来30天，避免无限循环
+    for (let i = 0; i < 30; i++) {
+      const isWorkdayResult = await isWorkday(scheduledTime)
+      if (isWorkdayResult) {
+        // 找到工作日，返回该日期
+        return scheduledTime
+      }
+      // 不是工作日，尝试下一天
+      scheduledTime.setDate(scheduledTime.getDate() + 1)
+    }
+    // 如果30天内没找到工作日，仍返回最后一个检查的日期
+    log('警告：未来30天内未找到工作日，使用最后检查的日期', 'warn')
+    return scheduledTime
+  }
+
+  // 如果不要求工作日，直接返回计算的时间
+  return scheduledTime
+}
+
 function scheduleTask(taskType) {
   const timeConfig = config.schedule[taskType]
-  const scheduledTime = generateRandomTime(timeConfig)
 
-  // 格式化时间显示
-  const timeStr = `${scheduledTime.getHours()}:${scheduledTime.getMinutes().toString().padStart(2, '0')}`
-  log(`已设置${taskType === 'signIn' ? '签到' : '签退'}时间: ${timeStr}`)
+  // 异步立即执行函数来处理异步的日期生成
+  ;(async () => {
+    const scheduledTime = await generateNextWorkdayTime(timeConfig)
 
-  // 创建定时任务
-  const job = schedule.scheduleJob(scheduledTime, async () => {
-    // 检查是否只在工作日执行
-    if (config.system && config.system.workdayOnly) {
-      // 检查今天是否为工作日
-      const today = new Date()
-      const workday = await isWorkday(today)
+    // 格式化日期和时间显示
+    const dateStr = `${scheduledTime.getFullYear()}-${(scheduledTime.getMonth() + 1).toString().padStart(2, '0')}-${scheduledTime.getDate().toString().padStart(2, '0')}`
+    const timeStr = `${scheduledTime.getHours().toString().padStart(2, '0')}:${scheduledTime.getMinutes().toString().padStart(2, '0')}`
+    log(`已设置${taskType === 'signIn' ? '签到' : '签退'}时间: ${dateStr} ${timeStr}`)
 
-      if (workday) {
-        log(`今天是工作日，执行${taskType === 'signIn' ? '签到' : '签退'}操作...`)
+    // 创建定时任务
+    const job = schedule.scheduleJob(scheduledTime, async () => {
+      try {
         // 根据任务类型执行相应的操作
         if (taskType === 'signIn') {
-          executeSignIn()
+          log('执行签到操作...')
+          await executeSignIn()
         } else {
-          executeSignOut()
+          log('执行签退操作...')
+          await executeSignOut()
         }
-      } else {
-        log(`今天不是工作日，跳过${taskType === 'signIn' ? '签到' : '签退'}操作`)
+      } catch (error) {
+        log(`执行${taskType === 'signIn' ? '签到' : '签退'}操作时发生错误: ${error.message}`, 'error')
+      } finally {
+        // 任务执行后，重新调度下一个工作日的任务
+        log(`重新调度下一个工作日的${taskType === 'signIn' ? '签到' : '签退'}任务`)
+        scheduleTask(taskType)
       }
-    } else {
-      // 不管是否工作日都执行
-      log(`执行${taskType === 'signIn' ? '签到' : '签退'}操作...`)
-      // 根据任务类型执行相应的操作
-      if (taskType === 'signIn') {
-        executeSignIn()
-      } else {
-        executeSignOut()
-      }
-    }
+    })
 
-    // 任务执行后，重新调度下一次任务
-    scheduleTask(taskType)
-  })
-
-  return job
+    return job
+  })()
 }
 
 // 启动定时任务
