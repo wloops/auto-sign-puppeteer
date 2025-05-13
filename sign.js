@@ -36,7 +36,16 @@ accounts.forEach((account) => {
 
 // 日志函数
 function log(message, level = 'info', accountName = 'system') {
-  const timestamp = new Date().toISOString()
+  // 使用本地时间而非UTC时间
+  const now = new Date()
+  const year = now.getFullYear()
+  const month = (now.getMonth() + 1).toString().padStart(2, '0')
+  const day = now.getDate().toString().padStart(2, '0')
+  const hours = now.getHours().toString().padStart(2, '0')
+  const minutes = now.getMinutes().toString().padStart(2, '0')
+  const seconds = now.getSeconds().toString().padStart(2, '0')
+  const timestamp = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
+
   const logMessage = `[${timestamp}] [${level.toUpperCase()}] [${accountName}] ${message}\n`
 
   // 写入账号特定日志
@@ -204,6 +213,17 @@ async function executeSignIn() {
       await browser.close()
       log('浏览器已关闭')
     }
+
+    // 显示下次签到时间
+    if (!isTest) {
+      try {
+        const nextScheduledTime = await generateNextWorkdayTime(config.schedule.signIn)
+        const nextTime = formatDateTime(nextScheduledTime)
+        log(`下次签到预计时间: ${nextTime.fullStr}`)
+      } catch (error) {
+        log(`无法计算下次签到时间: ${error.message}`, 'warn')
+      }
+    }
   }
 }
 
@@ -294,6 +314,17 @@ async function executeSignOut() {
       await browser.close()
       log('浏览器已关闭')
     }
+
+    // 显示下次签退时间
+    if (!isTest) {
+      try {
+        const nextScheduledTime = await generateNextWorkdayTime(config.schedule.signOut)
+        const nextTime = formatDateTime(nextScheduledTime)
+        log(`下次签退预计时间: ${nextTime.fullStr}`)
+      } catch (error) {
+        log(`无法计算下次签退时间: ${error.message}`, 'warn')
+      }
+    }
   }
 }
 
@@ -309,30 +340,54 @@ async function isWorkday(date = new Date()) {
 
   // 如果配置为使用API获取节假日信息
   if (config.system && config.system.useHolidayApi) {
-    try {
-      // 尝试使用免费API获取节假日信息
-      // 使用 https://timor.tech/api/holiday/info/ API
-      const response = await axios.get(`https://timor.tech/api/holiday/info/${formattedDate}`)
+    // 最多尝试3次API调用
+    let retryCount = 0
+    const maxRetries = 3
 
-      if (response.data && response.data.code === 0) {
-        // API返回的工作日类型：
-        // 0 - 工作日，1 - 周末，2 - 节假日
-        const type = response.data.type.type
+    while (retryCount < maxRetries) {
+      try {
+        // 尝试使用免费API获取节假日信息
+        // 使用 https://timor.tech/api/holiday/info/ API
+        log(`尝试获取节假日信息 (尝试 ${retryCount + 1}/${maxRetries})...`)
+        const response = await axios.get(`https://timor.tech/api/holiday/info/${formattedDate}`, {
+          timeout: 5000, // 设置5秒超时
+        })
 
-        if (type === 0) {
-          log(`${formattedDate} 是工作日`)
-          return true
-        } else if (type === 1 && response.data.type.workday) {
-          // 周末但需要补班
-          log(`${formattedDate} 是需要补班的周末`)
-          return true
+        if (response.data && response.data.code === 0) {
+          // API返回的工作日类型：
+          // 0 - 工作日，1 - 周末，2 - 节假日
+          const type = response.data.type.type
+
+          if (type === 0) {
+            log(`${formattedDate} 是工作日`)
+            return true
+          } else if (type === 1 && response.data.type.workday) {
+            // 周末但需要补班
+            log(`${formattedDate} 是需要补班的周末`)
+            return true
+          } else {
+            log(`${formattedDate} 不是工作日`)
+            return false
+          }
         } else {
-          log(`${formattedDate} 不是工作日`)
-          return false
+          // API返回了结果但格式不符合预期
+          log(`API返回格式异常: ${JSON.stringify(response.data)}，尝试重试`, 'warn')
+          retryCount++
+          // 等待1秒后重试
+          await new Promise((resolve) => setTimeout(resolve, 1000))
+          continue
+        }
+      } catch (error) {
+        retryCount++
+        if (retryCount >= maxRetries) {
+          log(`获取节假日信息失败(已重试${maxRetries}次): ${error.message}，使用默认规则判断`, 'warn')
+          break
+        } else {
+          log(`获取节假日信息失败: ${error.message}，${maxRetries - retryCount}秒后重试...`, 'warn')
+          // 等待重试，每次等待时间递增
+          await new Promise((resolve) => setTimeout(resolve, retryCount * 1000))
         }
       }
-    } catch (error) {
-      log(`获取节假日信息失败: ${error.message}，使用默认规则判断`, 'warn')
     }
   } else {
     log('根据配置，不使用API获取节假日信息，使用默认规则判断')
@@ -383,16 +438,29 @@ async function generateNextWorkdayTime(timeConfig) {
   return scheduledTime
 }
 
+// 格式化日期时间的辅助函数
+function formatDateTime(date) {
+  const year = date.getFullYear()
+  const month = (date.getMonth() + 1).toString().padStart(2, '0')
+  const day = date.getDate().toString().padStart(2, '0')
+  const hours = date.getHours().toString().padStart(2, '0')
+  const minutes = date.getMinutes().toString().padStart(2, '0')
+  return {
+    dateStr: `${year}-${month}-${day}`,
+    timeStr: `${hours}:${minutes}`,
+    fullStr: `${year}-${month}-${day} ${hours}:${minutes}`,
+  }
+}
+
 function scheduleTask(taskType) {
   const timeConfig = config.schedule[taskType]
 
   // 异步立即执行函数来处理异步的日期生成
-  ;(async () => {
+  return (async () => {
     const scheduledTime = await generateNextWorkdayTime(timeConfig)
 
     // 格式化日期和时间显示
-    const dateStr = `${scheduledTime.getFullYear()}-${(scheduledTime.getMonth() + 1).toString().padStart(2, '0')}-${scheduledTime.getDate().toString().padStart(2, '0')}`
-    const timeStr = `${scheduledTime.getHours().toString().padStart(2, '0')}:${scheduledTime.getMinutes().toString().padStart(2, '0')}`
+    const { dateStr, timeStr } = formatDateTime(scheduledTime)
     log(`已设置${taskType === 'signIn' ? '签到' : '签退'}时间: ${dateStr} ${timeStr}`)
 
     // 创建定时任务
@@ -411,7 +479,14 @@ function scheduleTask(taskType) {
       } finally {
         // 任务执行后，重新调度下一个工作日的任务
         log(`重新调度下一个工作日的${taskType === 'signIn' ? '签到' : '签退'}任务`)
+
+        // 创建新的任务调度，但不等待其完成
         scheduleTask(taskType)
+
+        // 计算并显示下次任务的预计时间
+        const nextScheduledTime = await generateNextWorkdayTime(timeConfig)
+        const nextTime = formatDateTime(nextScheduledTime)
+        log(`下次${taskType === 'signIn' ? '签到' : '签退'}预计时间: ${nextTime.fullStr}`)
       }
     })
 
