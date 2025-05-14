@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node sign.js",
     "test": "node sign.js --test",
+    "test-now": "node sign.js --test --now",
     "now": "node sign.js --now",
     "signout": "node sign.js --now --signout"
   },
