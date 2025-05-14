@@ -349,19 +349,33 @@ async function isWorkday(date = new Date()) {
         // 尝试使用免费API获取节假日信息
         // 使用 https://timor.tech/api/holiday/info/ API
         log(`尝试获取节假日信息 (尝试 ${retryCount + 1}/${maxRetries})...`)
-        const response = await axios.get(`https://timor.tech/api/holiday/info/${formattedDate}`, {
-          timeout: 5000, // 设置5秒超时
-        })
 
-        if (response.data && response.data.code === 0) {
+        // 使用fetch代替axios
+        const controller = new AbortController()
+        const timeoutId = setTimeout(() => controller.abort(), 5000) // 设置5秒超时
+
+        const response = await fetch(`https://timor.tech/api/holiday/info/${formattedDate}`, {
+          method: 'GET',
+          signal: controller.signal,
+        })
+        clearTimeout(timeoutId) // 清除超时计时器
+
+        if (!response.ok) {
+          throw new Error(`API请求失败: ${response.status} ${response.statusText}`)
+        }
+
+        const data = await response.json()
+        log(`获取节假日信息成功: ${JSON.stringify(data)}-${formattedDate}`)
+
+        if (data && data.code === 0) {
           // API返回的工作日类型：
           // 0 - 工作日，1 - 周末，2 - 节假日
-          const type = response.data.type.type
+          const type = data.type.type
 
           if (type === 0) {
             log(`${formattedDate} 是工作日`)
             return true
-          } else if (type === 1 && response.data.type.workday) {
+          } else if (type === 1 && data.type.workday) {
             // 周末但需要补班
             log(`${formattedDate} 是需要补班的周末`)
             return true
@@ -371,7 +385,7 @@ async function isWorkday(date = new Date()) {
           }
         } else {
           // API返回了结果但格式不符合预期
-          log(`API返回格式异常: ${JSON.stringify(response.data)}，尝试重试`, 'warn')
+          log(`API返回格式异常: ${JSON.stringify(data)}，尝试重试`, 'warn')
           retryCount++
           // 等待1秒后重试
           await new Promise((resolve) => setTimeout(resolve, 1000))
