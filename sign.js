@@ -238,10 +238,89 @@ async function executeSignOut() {
   }
 }
 
-// 调度相关函数
+// 判断是否为工作日的函数
 async function isWorkday(date = new Date()) {
+  // 获取日期的年、月、日
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`
+
+  // 如果配置为使用API获取节假日信息
+  if (config.system && config.system.useHolidayApi) {
+    // 最多尝试3次API调用
+    let retryCount = 0
+    const maxRetries = 3
+
+    while (retryCount < maxRetries) {
+      try {
+        // 尝试使用免费API获取节假日信息
+        // 使用 https://timor.tech/api/holiday/info/ API
+        log(`尝试获取节假日信息 (尝试 ${retryCount + 1}/${maxRetries})...`)
+
+        // 使用fetch代替axios
+        const controller = new AbortController()
+        const timeoutId = setTimeout(() => controller.abort(), 5000) // 设置5秒超时
+
+        const response = await fetch(`https://timor.tech/api/holiday/info/${formattedDate}`, {
+          method: 'GET',
+          signal: controller.signal,
+        })
+        clearTimeout(timeoutId) // 清除超时计时器
+
+        if (!response.ok) {
+          throw new Error(`API请求失败: ${response.status} ${response.statusText}`)
+        }
+
+        const data = await response.json()
+        log(`获取节假日信息成功: ${JSON.stringify(data)}-${formattedDate}`)
+
+        if (data && data.code === 0) {
+          // API返回的工作日类型：
+          // 0 - 工作日，1 - 周末，2 - 节假日
+          const type = data.type.type
+
+          if (type === 0) {
+            log(`${formattedDate} 是工作日`)
+            return true
+          } else if (type === 1 && data.type.workday) {
+            // 周末但需要补班
+            log(`${formattedDate} 是需要补班的周末`)
+            return true
+          } else {
+            log(`${formattedDate} 不是工作日`)
+            return false
+          }
+        } else {
+          // API返回了结果但格式不符合预期
+          log(`API返回格式异常: ${JSON.stringify(data)}，尝试重试`, 'warn')
+          retryCount++
+          // 等待1秒后重试
+          await new Promise((resolve) => setTimeout(resolve, 1000))
+          continue
+        }
+      } catch (error) {
+        retryCount++
+        if (retryCount >= maxRetries) {
+          log(`获取节假日信息失败(已重试${maxRetries}次): ${error.message}，使用默认规则判断`, 'warn')
+          break
+        } else {
+          log(`获取节假日信息失败: ${error.message}，${maxRetries - retryCount}秒后重试...`, 'warn')
+          // 等待重试，每次等待时间递增
+          await new Promise((resolve) => setTimeout(resolve, retryCount * 1000))
+        }
+      }
+    }
+  } else {
+    log('根据配置，不使用API获取节假日信息，使用默认规则判断')
+  }
+
+  // 如果API调用失败或配置为不使用API，使用默认规则：周一至周五为工作日
   const dayOfWeek = date.getDay()
-  return dayOfWeek >= 1 && dayOfWeek <= 5 // 周一至周五
+  const isWeekday = dayOfWeek >= 1 && dayOfWeek <= 5
+
+  log(`使用默认规则判断 ${formattedDate} ${isWeekday ? '是' : '不是'}工作日`)
+  return isWeekday
 }
 
 async function generateNextWorkdayTime(timeConfig) {
