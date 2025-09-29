@@ -13,6 +13,8 @@ module.exports = {
     workdayOnly: true,
     // 是否使用API获取节假日信息，如果为false则使用默认规则（周一至周五为工作日）
     useHolidayApi: true,
+    // 聚合数据ApiKey
+    juheApiKey: '7d8fb7c727f8957e83ae0a5a02c21869',
   },
 
   // 登录配置
