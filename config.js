@@ -2,7 +2,7 @@
  * @Author: Loong wentloop@gmail.com
  * @Date: 2025-04-14 23:13:10
  * @LastEditors: Loong wentloop@gmail.com
- * @LastEditTime: 2025-05-12 08:32:49
+ * @LastEditTime: 2025-05-11 23:17:29
  * @FilePath: \auto-sign-puppeteer\config.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -21,11 +21,11 @@ module.exports = {
   // 支持多账号，每个账号配置为数组中的一个对象
   accounts: [
     {
-      name: 'lwl', // 账号名称，用于日志和截图文件夹
+      name: 'llx', // 账号名称，用于日志和截图文件夹
       login: {
         url: 'http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121',
-        username: 'lwl', // 替换为实际用户名
-        password: 'lwl123', // 替换为实际密码
+        username: 'lianglx1', // 替换为实际用户名
+        password: 'lianglx1', // 替换为实际密码
         selectors: {
           username: '#userID',
           password: '#hisu_password',
@@ -42,11 +42,11 @@ module.exports = {
       },
     },
     {
-      name: 'llx', // 账号名称，用于日志和截图文件夹
+      name: 'lwl', // 账号名称，用于日志和截图文件夹
       login: {
         url: 'http://795tg1082ff7.vicp.fun/gms-v4/login.jsp?key=developmentServerTest121',
-        username: 'lianglx1', // 替换为实际用户名
-        password: 'lianglx1', // 替换为实际密码
+        username: 'lwl', // 替换为实际用户名
+        password: 'lwl123', // 替换为实际密码
         selectors: {
           username: '#userID',
           password: '#hisu_password',
@@ -123,17 +123,17 @@ module.exports = {
     },
     // 签退时间范围配置
     signOut: {
-      hour: 18, // 小时
-      minStart: 50, // 分钟开始范围
-      minEnd: 59, // 分钟结束范围
+      hour: 19, // 小时
+      minStart: 15, // 分钟开始范围
+      minEnd: 45, // 分钟结束范围
       cron: '0 18 * * *', // 默认cron表达式（用于兼容）
     },
   },
 
   // 浏览器配置
   browser: {
-    headless: false, // 开发时可设为false查看浏览器
+    headless: true, // 开发时可设为false查看浏览器
     slowMo: 100, // 操作延迟(毫秒)
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--start-maximized'],
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
   },
 }

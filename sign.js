@@ -74,7 +74,7 @@ function hasExecutedToday(accountName, action) {
 async function login(page, accountConfig, accountName) {
   try {
     log(`导航到登录页面: ${accountConfig.login.url}`, 'info', accountName)
-    await page.goto(accountConfig.login.url, { waitUntil: 'networkidle2', timeout: 30000 })
+    await page.goto(accountConfig.login.url, { waitUntil: 'networkidle2', timeout: 60000 })
 
     log('填写登录表单', 'info', accountName)
     await page.type(accountConfig.login.selectors.username, accountConfig.login.username)
@@ -139,9 +139,9 @@ async function signIn(page, accountConfig, accountName) {
     }
 
     // 实际签到操作
-    await page.waitForSelector(accountConfig.sign.selectors.signIn, { timeout: 15000 })
+    await page.waitForSelector(accountConfig.sign.selectors.signIn, { timeout: 60000 })
     await page.click(accountConfig.sign.selectors.signIn)
-    await page.waitForSelector('#alertMsgBox', { timeout: 5000 })
+    await page.waitForSelector('#alertMsgBox', { timeout: 60000 })
 
     recordExecution(accountName, 'signIn', 'success')
     log('签到成功', 'info', accountName)
@@ -169,9 +169,9 @@ async function signOut(page, accountConfig, accountName) {
       return true
     }
 
-    await page.waitForSelector(accountConfig.sign.selectors.signOut, { timeout: 15000 })
+    await page.waitForSelector(accountConfig.sign.selectors.signOut, { timeout: 60000 })
     await page.click(accountConfig.sign.selectors.signOut)
-    await page.waitForSelector('#alertMsgBox', { timeout: 5000 })
+    await page.waitForSelector('#alertMsgBox', { timeout: 60000 })
 
     recordExecution(accountName, 'signOut', 'success')
     log('签退成功', 'info', accountName)
@@ -266,7 +266,7 @@ async function isWorkday(date = new Date()) {
         try {
           log(`[聚合API] 正在查询日期 ${formattedDate} 的工作日信息... (尝试 ${retryCount + 1}/${maxRetries})`)
           const controller = new AbortController()
-          const timeoutId = setTimeout(() => controller.abort(), 8000) // 8秒超时
+          const timeoutId = setTimeout(() => controller.abort(), 15000) // 15秒超时
 
           const response = await fetch(url, { method: 'GET', signal: controller.signal })
           clearTimeout(timeoutId)
