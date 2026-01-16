@@ -8,8 +8,6 @@ services:
     restart: unless-stopped
     environment:
       - TZ=Asia/Shanghai
-      - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-      - PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
       # 限制 Node.js 内存，防止 OOM
       - NODE_OPTIONS=--max-old-space-size=256
     volumes:
