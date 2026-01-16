@@ -1,0 +1,28 @@
+services:
+  auto-sign:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: auto-sign-puppeteer
+    # 崩溃后自动重启，除非手动停止
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+      - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+      - PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
+      # 限制 Node.js 内存，防止 OOM
+      - NODE_OPTIONS=--max-old-space-size=256
+    volumes:
+      - ./logs:/app/logs
+      - ./screenshots:/app/screenshots
+      - ./config.js:/app/config.js:ro
+    # 使用 tmpfs 解决 /dev/shm 过小的问题（Chrome 需要）
+    shm_size: '256mb'
+    # 资源限制（适合 2H2G 服务器）
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: '1.0'
+        reservations:
+          memory: 128M
