@@ -23,6 +23,9 @@ COPY --chown=pptruser:pptruser package.json pnpm-lock.yaml ./
 # 安装依赖
 RUN pnpm install --frozen-lockfile
 
+# 安装 Chrome 浏览器（确保版本匹配）
+RUN npx puppeteer browsers install chrome
+
 # 复制项目文件（排除 node_modules）
 COPY --chown=pptruser:pptruser . .
 
